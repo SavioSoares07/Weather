@@ -21,3 +21,33 @@ body {
     background: #4f39a3;
     margin-bottom: 60px;
 }
+h1,h2,h3,h4,h5,h6,span{
+    color : #fff;
+}
+.text-center{
+    display : flex;
+    align-items : center;
+    justify-content : space-between;
+    flex-direction : column;
+
+}
+#container-weather {
+    padding : 40px;
+    border-radius : 10px;
+    max-width: 400px;
+    background-color: #272777;
+    margin-bottom : 20px;
+}
+#container-weather-text{
+    display : flex;
+    justify-content : space-between;
+}
+#container-weather h1{
+    font-size : 80px;
+}
+#container-weather h3{
+    font-size : 60px;
+}
+#container-weather-text div{
+    padding : 20px;
+}
