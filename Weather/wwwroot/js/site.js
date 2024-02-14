@@ -7,18 +7,22 @@
 
         fetch('/Home/SearchResult', {
             method: 'POST',
-            body : formData
+            body: formData
         })
             .then(res => {
-                if (res.ok) {
-                    console.log("Dados enviados com sucesso!")
-                } else {
-                    console.error("Erro ao enviar os dados")
+                if (!res.ok) {
+                    throw new Error("Erro ao enviar os dados: " + res.status);
                 }
-            }).catch(e => {
-                console.error(e)
+                return res.json();
             })
+            .then(data => {
+                console.log(data);
+                // Aqui você pode manipular os dados recebidos
+            })
+            .catch(e => {
+                console.error(e.message);
+            });
     } else {
-        alert("Por favor preencha o campo")
+        alert("Por favor, preencha o campo");
     }
 }
